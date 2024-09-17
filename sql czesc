@@ -1,0 +1,13 @@
+
+
+
+Zapytanie 1: wybierające jedynie pola nazwa i cena z tabeli uslugi dla usług, których cena jest 
+wyższa lub równa 50 zł
+– Zapytanie 2: liczące średnią arytmetyczną cen usług oraz liczbę usług jedynie dla usług 
+kosmetycznych
+– Zapytanie 3: tworzące użytkownika kosmetyczka na localhost z hasłem Kosmet34
+– Zapytanie 4: nadające prawa przeglądania danych i aktualizacji do tabeli uslugi bazy salon dla 
+użytkownika kosmetyczk
+
+
+1. select nazwa, cena from uslugi where cena>=50 ;
