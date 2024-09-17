@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <!--lewa str-->
+    <article id="lewy">
+        <section id="pierwszy">
+            <h2>Nasza oferta</h2>
+            
+            <ol>
+                <li ><a href="twarz.html">Oczyszczanie twarzy</a>
+                    <ul>
+                        <li>Peeling</li>
+                        <li>Maska</li>
+
+
+                    </ul>
+                    
+
+                </li>
+               
+                <li>Masaż</li>
+                <li>Makijaż</li>
+            </ol>
+
+            <a href="index.html" id="str">Strona główna</a>
+
+        </section>
+
+        <section id="drugi">
+            <img src="obraz1.jpg" alt="Personel"id="obraz1">
+            
+        </section>
+
+    </article>
+
+
+    <!--prawa str-->
+    <main id="prawy">
+        <aside id="blok1">
+            <h1>Usługi kosmetyczne</h1>
+
+        </aside>
+
+
+        <aside id="blok2">
+           <h3>Kalkulator ceny wizyty</h3>
+
+            <input type="checkbox" value=45 name="usluga" id="peeling">Peeling<br>
+            <input type="checkbox" value=30 name="usluga" id="maska">Maska<br>
+            <input type="checkbox" value=20 name="usluga" id="masaz">Masaż twarzy<br>
+            <input type="checkbox" value=50 name="usluga" id="makijaz">Makijaż<br>
+            <button>Oblicz cene</button> 
+            <p id="wynik"> </p>
+        </aside>
+      
+    </main>
+
+<footer><p>Autor: nr 7</p></footer>
+
+<script>
+const peeling=document.querySelector('#peeling');
+const maska=document.querySelector('#maska');
+const masaz=document.querySelector('#masaz');
+const makijaz= document.querySelector('#makijaz');
+const przycisk=document.querySelector('button');
+const wynik=document.querySelector('#wynik')
+
+
+
+przycisk.addEventListener('click', function(evt){
+    evt.preventDefault;
+    
+    let suma=0;
+if(peeling.checked){
+    suma=suma+parseInt(peeling.value)   
+}if(maska.checked){
+    suma=suma+parseInt(maska.value)
+}if(masaz.checked){
+    suma=suma+parseInt(masaz.value)
+}if(makijaz.checked){
+    suma=suma+parseInt(makijaz.value)
+}
+
+wynik.innerHTML=`Cena zabiegów: ${suma}`;
+
+})
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
